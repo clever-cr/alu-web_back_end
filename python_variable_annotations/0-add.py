@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
-def sum(a: float,b: float):
-    return (a+b)
-sum(4,5)
+"""define function add"""
+
+
+def add(a: float, b: float) -> float:
+    """add two numbers"""
+    return a+b

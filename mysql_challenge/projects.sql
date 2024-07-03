@@ -2,13 +2,21 @@ CREATE TABLE Projects (
     ProjectID INT AUTO_INCREMENT PRIMARY KEY,
     ProjectName VARCHAR(255) NOT NULL,
     Requirements TEXT,
-    Deadline DATE
+    Deadline DATE,
+    ClientID INT,
+    FOREIGN KEY (ClientID) REFERENCES Clients(ClientID)
 );
+
 CREATE TABLE Clients (
     ClientID INT AUTO_INCREMENT PRIMARY KEY,
     ClientName VARCHAR(255) NOT NULL,
     ContactName VARCHAR(255),
     ContactEmail VARCHAR(255)
+);
+
+CREATE TABLE Employees (
+    EmployeeID INT AUTO_INCREMENT PRIMARY KEY,
+    EmployeeName VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE TeamMembers (

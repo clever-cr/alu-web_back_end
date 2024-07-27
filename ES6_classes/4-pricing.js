@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import Currency from "./3-currency";
+import Currency from './3-currency';
 /* eslint-enable no-unused-vars */
 
 export default class Pricing {

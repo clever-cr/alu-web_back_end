@@ -7,8 +7,7 @@ export default class HolbertonCourse {
       throw TypeError('length must be a number');
     }
     if (
-      students.constructor !== Array &&
-      students.every((el) => typeof el === 'string')
+      students.constructor !== Array && students.every((el) => typeof el === 'string')
     ) {
       throw TypeError('students must be an array of strings');
     }
@@ -46,8 +45,7 @@ export default class HolbertonCourse {
 
   set students(newStudents) {
     if (
-      newStudents.constructor !== Array &&
-      newStudents.every((el) => typeof el === 'string')
+      newStudents.constructor !== Array && newStudents.every((el) => typeof el === 'string')
     ) {
       throw TypeError('students must be an array of strings');
     }

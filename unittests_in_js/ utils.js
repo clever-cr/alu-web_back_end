@@ -1,15 +1,14 @@
+
 const Utils = {
-  isNegZero(n) {
+  isNegZero (n) {
     const num = Number(n);
     return num === 0 && 1 / num === -Infinity;
   },
-  calculateNumber(type, a, b = 0) {
+  calculateNumber (type, a, b = 0) {
     let aNum = Number(a);
     let bNum = Number(b);
 
-    if (Number.isNaN(aNum) || Number.isNaN(bNum)) {
-      throw TypeError('Parameters must be numbers or able to coerce to number');
-    }
+    if (Number.isNaN(aNum) || Number.isNaN(bNum)) { throw TypeError('Parameters must be numbers or able to coerce to number'); }
 
     aNum = Math.round(aNum);
     bNum = Math.round(bNum);
@@ -30,7 +29,8 @@ const Utils = {
           'Invalid operation type. Valid types are "SUM", "SUBTRACT", and "DIVIDE".'
         );
     }
-  },
+  }
 };
 
 module.exports = Utils;
+

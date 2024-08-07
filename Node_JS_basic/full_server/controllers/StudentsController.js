@@ -48,7 +48,7 @@ export default class StudentsController {
         .filter((line) => line.length > 0)
         .slice(1);
       const majorStudents = lines.filter(
-        (line) => line.split(',')[3] === major
+        (line) => line.split(',')[3] === major,
       );
       const students = majorStudents.map((student) => student.split(',')[0]);
       const responseText = `List: ${students.join(', ')}`;
